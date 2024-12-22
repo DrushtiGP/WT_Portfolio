@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS Exploration</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <section id="html-css-exploration">
+    <div class="exploration-container">
+      <h1>HTML & CSS Exploration</h1>
+
+      <!-- HTML Basics -->
+      <div class="exploration-section">
+        <h2>HTML Basics</h2>
+        <p>
+          Explored fundamental HTML tags such as headings, paragraphs, links, images, and lists. 
+          Learned how to structure web pages using semantic elements like <strong>&lt;header&gt;</strong>, <strong>&lt;nav&gt;</strong>, <strong>&lt;section&gt;</strong>, and <strong>&lt;footer&gt;</strong>.
+        </p>
+      </div>
+
+      <!-- HTML Tables and Forms -->
+      <div class="exploration-section">
+        <h2>HTML Tables and Forms</h2>
+        <h3>Sample Table</h3>
+        <table border="1">
+          <thead>
+              <th>Roll No.</th>
+              <th>FName</th>
+              <th>LName</th>
+              <th colspan="2">Mobile No.</th>
+          </thead>
+  
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>Raam</td>
+                  <td>Durga</td>
+                  <td>9878655890</td>
+                  <td>7878987690</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>Seeta</td>
+                  <td>B.</td>
+                  <td>9890908789</td>
+                  <td>9900890090</td>
+              </tr>
+          </tbody>
+  
+  
+      </table>
+  
+      <table border="1">
+          <tr>
+              <td>Name</td>
+              <td>Ravi</td>
+          </tr>
+  
+          <tr>
+              <td rowspan="2">Telephone No.</td>
+              <td>8909890789</td>
+          </tr>
+          <tr>
+              
+              <td>9090990090</td>
+          </tr>
+      </table>
+
+        <h3>Sample Form</h3>
+        <form action="/example_page.php" target="_blank" >
+          <h1 style="text-align: center;">Student Registration Form</h1>
+          <fieldset>
+              <legend>Personal Information</legend>
+              <label for="Name"> <b>FName</b> </label>
+              <input type="text" id="Name">
+              </br></br>
+      
+              <label for="Lname"><b>LName</b></label>
+              <input type="Lname">
+              </br></br>
+      
+              <label for="Enter password"><b>Password</b></label>
+              <input type="password">
+              </br></br>
+              <input type="checkbox" id="S1" name="subjects">
+              <label for="S1">CSS</label>
+      
+              <input type="checkbox" id="S2" name="subjects">
+              <label for="S2" >JAVASCRIPT</label>
+      
+              <input type="checkbox" id="S3" name="subjects">
+              <label for="S3">HTML</label>
+      
+              <p>Select branch</p>
+              <input type="radio" id="CSE" name="branch">
+              <label for="CSE">CSE</label>
+      
+              <input type="radio" id="ECE" name="branch">
+              <label for="ECE">ECE</label>
+      
+              <input type="radio" id="CSI" name="branch">
+              <label for="CSI">CSI</label>
+              <br></br>
+      
+              <p>Select semester</p>
+              <select name="Semester" id="Sem">
+                  <option value="1">I</option>
+                  <option value="3">III</option>
+                  <option value="5">V</option>
+                  <option value="7">VII</option>
+                  <option selected value="">Choose one</option>
+              </select>
+              </br>
+      
+              <textarea name="message" id="text" rows="10" cols="30">The cat was playig around</textarea>
+      
+              </br>
+              <button>Submit</button>
+              </br></br>
+          </fieldset>
+      </form>
+      </div>
+
+      <!-- CSS Basics -->
+      <div class="exploration-section">
+        <h2>CSS Basics</h2>
+        <p>
+          Learned the basics of CSS, including applying styles to elements using selectors, colors, fonts, and layout. 
+          Explored the box model and practiced adjusting margins, padding, borders, and content size.
+        </p>
+        <div class="box-model-example">
+          <h3>Box Model Example</h3>
+          <p>This is a demonstration of the box model with padding, margin, and border applied.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

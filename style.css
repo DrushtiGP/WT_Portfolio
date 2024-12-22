@@ -295,3 +295,133 @@ body {
     bottom: 0;
   }
   
+
+  /* Dropdown Styles */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown a {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    list-style: none;
+    padding: 10px 0;
+  }
+  /* Dropdown Styles */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown a {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 200px;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  .dropdown-content li {
+    padding: 10px 20px;
+  }
+  
+  .dropdown-content li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown-content li:hover {
+    background: #e6f7ff;
+  }
+  
+  .dropdown-content li a:hover {
+    color: #0056b3;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+
+  #project-showcase {
+    padding: 40px;
+    background: #f9f9f9;
+  }
+  
+  .project-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .project-description, .project-technologies, .project-features, .project-challenges, .project-links {
+    margin-bottom: 20px;
+  }
+  
+  .project-container h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .project-container ul {
+    list-style: square inside;
+    margin: 10px 0;
+    padding: 0;
+  }
+  
+  .project-container p, .project-container li {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .project-links a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .project-links a:hover {
+    background: #0056b3;
+  }
+  
+  
