@@ -1,54 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill Payment Portal</title>
-    <style>
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Payment Project</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Bill Payment Project</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Your existing home page link to different bills -->
-
-    <!-- Example Bill Payment Form -->
-    <div class="bill-form">
-        <h3>Pay Your Bills</h3>
-
-        <label for="billType">Select Bill Type:</label>
-        <select id="billType" onchange="updateOutstandingDues()">
-            <option value="electricity">Electricity Bill</option>
-            <option value="water">Water Bill</option>
-            <option value="landline">Landline Bill</option>
-        </select>
-
-        <label for="billAmount">Bill Amount:</label>
-        <input type="number" id="billAmount" placeholder="Enter bill amount" required>
-
-        <label for="dueAmount">Outstanding Dues:</label>
-        <input type="number" id="dueAmount" readonly>
-
-        <input type="submit" value="Pay Bill">
+  <!-- Bill Payment Project Section -->
+  <section id="bill-payment">
+    <h2>Welcome to the Bill Payment Project</h2>
+    <p>This project showcases different bill payment forms like electricity and landline.</p>
+    
+    <div class="projects-list">
+      <ul>
+        <li><a href="Bill_payment/electricity.html">Electricity Bill Payment</a></li>
+        <li><a href="Bill_payment/ladline.html">Landline Bill Payment</a></li>
+        <li><a href="Bill_payment/index.html">Bill Payment Home</a></li> <!-- Main page for Bill Payment project -->
+        <li><a href="Bill_payment/styles.html">Styles Page</a></li> <!-- Page with styles or any additional details -->
+      </ul>
     </div>
+  </section>
 
-    <script>
-        // Simulated outstanding dues data
-        const duesData = {
-            electricity: 100.50,
-            water: 50.75,
-            landline: 30.00
-        };
-
-        // Function to update the Outstanding Dues dynamically
-        function updateOutstandingDues() {
-            const billType = document.getElementById('billType').value;
-            const dueAmount = duesData[billType]; // Get dues based on the bill type
-            document.getElementById('dueAmount').value = dueAmount;
-        }
-
-        // Initialize the Outstanding Dues on page load
-        window.onload = updateOutstandingDues;
-    </script>
-
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Bill Payment Project. All rights reserved.</p>
+  </footer>
 </body>
 </html>
