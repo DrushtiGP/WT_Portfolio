@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landline Bill Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Landline Bill Payment</h2>
+        <form id="landlineForm">
+            <label for="calls">Enter Number of Calls Made:</label>
+            <input type="number" id="calls" name="calls" required>
+            <label for="landlineDues">Outstanding Dues:</label>
+            <input type="number" id="landlineDues" name="landlineDues" value="0" readonly>
+            <button type="button" onclick="generateLandlineBill()">Generate Bill</button>
+            <div id="landlineBillAmount"></div>
+            <button type="submit">Pay Bill</button>
+        </form>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+    <script>
+        function generateLandlineBill() {
+            const calls = document.getElementById("calls").value;
+            if (calls && calls > 0) {
+                const ratePerCall = 0.50; 
+                const billAmount = calls * ratePerCall;
+                document.getElementById("landlineBillAmount").innerHTML = `<p>Total Amount: $${billAmount}</p>`;
+            } else {
+                alert("Please enter a valid number of calls.");
+            }
+        }
+
+        document.getElementById("landlineForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const calls = document.getElementById("calls").value;
+            const landlineDues = document.getElementById("landlineDues").value;
+            if (calls > 0) {
+                alert(`Landline Bill Paid Successfully! Your total amount was $${calls * 0.50 + parseInt(landlineDues)}.`);
+            } else {
+                alert("Please generate a valid landline bill.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Electricity Bill Payment</h2>
+        <form id="electricityForm">
+            <label for="units">Enter Units Consumed:</label>
+            <input type="number" id="units" name="units" required>
+            <label for="dueAmount">Outstanding Dues:</label>
+            <input type="number" id="dueAmount" name="dueAmount" value="0" readonly>
+            <button type="button" onclick="generateBill()">Generate Bill</button>
+            <div id="billAmount"></div>
+            <button type="submit">Pay Bill</button>
+        </form>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+    <script>
+        function generateBill() {
+            const units = document.getElementById("units").value;
+            if (units && units > 0) {
+                const ratePerUnit = 10; // Set a rate for calculation
+                const billAmount = units * ratePerUnit;
+                document.getElementById("billAmount").innerHTML = `<p>Total Amount: $${billAmount}</p>`;
+            } else {
+                alert("Please enter a valid number of units.");
+            }
+        }
+
+        document.getElementById("electricityForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const units = document.getElementById("units").value;
+            const dueAmount = document.getElementById("dueAmount").value;
+            if (units > 0) {
+                alert(`Bill Paid Successfully! Your total amount was $${units * 10 + parseInt(dueAmount)}.`);
+            } else {
+                alert("Please generate a valid bill.");
+            }
+        });
+    </script>
+</body>
+</html>

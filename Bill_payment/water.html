@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Bill Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Water Bill Payment</h2>
+        <form id="waterForm">
+            <label for="cubicMeters">Enter Water Usage (in Cubic Meters):</label>
+            <input type="number" id="cubicMeters" name="cubicMeters" required>
+            <label for="waterDues">Outstanding Dues:</label>
+            <input type="number" id="waterDues" name="waterDues" value="0" readonly>
+            <button type="button" onclick="generateWaterBill()">Generate Bill</button>
+            <div id="waterBillAmount"></div>
+            <button type="submit">Pay Bill</button>
+        </form>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+    <script>
+        function generateWaterBill() {
+            const cubicMeters = document.getElementById("cubicMeters").value;
+            if (cubicMeters && cubicMeters > 0) {
+                const ratePerCubicMeter = 5;
+                const billAmount = cubicMeters * ratePerCubicMeter;
+                document.getElementById("waterBillAmount").innerHTML = `<p>Total Amount: $${billAmount}</p>`;
+            } else {
+                alert("Please enter a valid number of cubic meters.");
+            }
+        }
+
+        document.getElementById("waterForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const cubicMeters = document.getElementById("cubicMeters").value;
+            const waterDues = document.getElementById("waterDues").value;
+            if (cubicMeters > 0) {
+                alert(`Water Bill Paid Successfully! Your total amount was $${cubicMeters * 5 + parseInt(waterDues)}.`);
+            } else {
+                alert("Please generate a valid water bill.");
+            }
+        });
+    </script>
+</body>
+</html>

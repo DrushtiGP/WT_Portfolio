@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment Portal</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <!-- Your existing home page link to different bills -->
+
+    <!-- Example Bill Payment Form -->
+    <div class="bill-form">
+        <h3>Pay Your Bills</h3>
+
+        <label for="billType">Select Bill Type:</label>
+        <select id="billType" onchange="updateOutstandingDues()">
+            <option value="electricity">Electricity Bill</option>
+            <option value="water">Water Bill</option>
+            <option value="landline">Landline Bill</option>
+        </select>
+
+        <label for="billAmount">Bill Amount:</label>
+        <input type="number" id="billAmount" placeholder="Enter bill amount" required>
+
+        <label for="dueAmount">Outstanding Dues:</label>
+        <input type="number" id="dueAmount" readonly>
+
+        <input type="submit" value="Pay Bill">
+    </div>
+
+    <script>
+        // Simulated outstanding dues data
+        const duesData = {
+            electricity: 100.50,
+            water: 50.75,
+            landline: 30.00
+        };
+
+        // Function to update the Outstanding Dues dynamically
+        function updateOutstandingDues() {
+            const billType = document.getElementById('billType').value;
+            const dueAmount = duesData[billType]; // Get dues based on the bill type
+            document.getElementById('dueAmount').value = dueAmount;
+        }
+
+        // Initialize the Outstanding Dues on page load
+        window.onload = updateOutstandingDues;
+    </script>
+
+</body>
+</html>
